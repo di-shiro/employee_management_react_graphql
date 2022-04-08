@@ -36,8 +36,8 @@ const MainPage = () => {
   } else if (errorEmployees || errorDepts) {
     return (
       <>
-        <h1>Employee data fetch error : {errorEmployees.message} </h1>
-        <h1>Department data fetch error : {errorDepts.message} </h1>
+        <h1>Employee data fetch error : {errorEmployees.message}</h1>
+        <h1>Department data fetch error : {errorDepts.message}</h1>
       </>
     );
   }
@@ -55,8 +55,9 @@ const MainPage = () => {
         />
       </h1>
       <Grid container>
-        <Grid item xs={5}></Grid>
-        <EmployeeList dataEmployees={dataEmployees} />
+        <Grid item xs={5}>
+          <EmployeeList dataEmployees={dataEmployees} />
+        </Grid>
         <Grid item xs={4}></Grid>
         <Grid item xs={3}></Grid>
       </Grid>
