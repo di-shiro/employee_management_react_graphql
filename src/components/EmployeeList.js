@@ -12,7 +12,8 @@ const EmployeeList = ({ dataEmployees }) => {
             <li className={styles.employeeList__item} key={empl.node.id}>
               <span>
                 {empl.node.name} {" / "}
-                {empl.node.joinYear} {" / "}
+                {empl.node.joinYear}
+                {" / "}
                 {empl.node.department.deptName}
               </span>
             </li>
