@@ -100,3 +100,17 @@ export const DELETE_EMPLOYEE = gql`
     }
   }
 `;
+
+export const GET_SINGLE_EMPLOYEE = gql`
+  query ($id: ID!) {
+    employee(id: $id) {
+      id
+      name
+      joinYear
+      department {
+        id
+        deptName
+      }
+    }
+  }
+`;

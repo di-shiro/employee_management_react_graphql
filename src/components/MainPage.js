@@ -7,6 +7,7 @@ import { Grid } from "@material-ui/core";
 import jwtDecode from "jwt-decode";
 import EmployeeList from "./EmployeeList";
 import EmployeeCreate from "./EmployeeCreate";
+import EmployeeDetails from "./EmployeeDetails";
 
 const MainPage = () => {
   const {
@@ -60,7 +61,9 @@ const MainPage = () => {
         <Grid item xs={5}>
           <EmployeeList dataEmployees={dataEmployees} />
         </Grid>
-        <Grid item xs={4}></Grid>
+        <Grid item xs={4}>
+          <EmployeeDetails />
+        </Grid>
         <Grid item xs={3}></Grid>
       </Grid>
     </div>
