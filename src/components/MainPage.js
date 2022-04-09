@@ -8,6 +8,7 @@ import jwtDecode from "jwt-decode";
 import EmployeeList from "./EmployeeList";
 import EmployeeCreate from "./EmployeeCreate";
 import EmployeeDetails from "./EmployeeDetails";
+import DeptList from "./DeptList";
 
 const MainPage = () => {
   const {
@@ -56,6 +57,7 @@ const MainPage = () => {
           }}
         />
       </h1>
+
       <EmployeeCreate dataDepts={dataDepts} />
       <Grid container>
         <Grid item xs={5}>
@@ -64,7 +66,9 @@ const MainPage = () => {
         <Grid item xs={4}>
           <EmployeeDetails />
         </Grid>
-        <Grid item xs={3}></Grid>
+        <Grid item xs={3}>
+          <DeptList dataDepts={dataDepts} />
+        </Grid>
       </Grid>
     </div>
   );
