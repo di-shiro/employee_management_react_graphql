@@ -53,9 +53,7 @@ const EmployeeList = ({ dataEmployees }) => {
                     if (empl.node.id === dataSingleEmployee?.employee.id) {
                       await getSingleEmployee({
                         variables: {
-                          variables: {
-                            id: empl.node.id,
-                          },
+                          id: empl.node.id,
                         },
                       });
                     }

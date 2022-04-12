@@ -135,3 +135,98 @@ export const GET_SINGLE_EMPLOYEE = gql`
     }
   }
 `;
+
+export const SEARCH_EMPLOYEE = gql`
+  query ($name: String) {
+    allEmployees(name_Icontains: $name) {
+      edges {
+        node {
+          id
+          name
+          joinYear
+          department {
+            id
+            deptName
+          }
+        }
+      }
+    }
+  }
+`;
+
+export const SEARCH_AND_EMPLOYEE = gql`
+  query ($name: String, $joinYear: Int, $dept: String) {
+    allEmployees(
+      name_Icontains: $name
+      joinYear: $joinYear
+      department_DeptName_Icontains: $dept
+    ) {
+      edges {
+        node {
+          id
+          name
+          joinYear
+          department {
+            id
+            deptName
+          }
+        }
+      }
+    }
+  }
+`;
+
+export const PAGINATE_FIRST_EMPLOYEE = gql`
+  query ($first: Int) {
+    allEmployees(first: $first) {
+      edges {
+        node {
+          id
+          name
+          joinYear
+          department {
+            id
+            deptName
+          }
+        }
+      }
+    }
+  }
+`;
+
+export const PAGINATE_LAST_EMPLOYEE = gql`
+  query ($last: Int) {
+    allEmployees(last: $last) {
+      edges {
+        node {
+          id
+          name
+          joinYear
+          department {
+            id
+            deptName
+          }
+        }
+      }
+    }
+  }
+`;
+
+export const PAGINATE_MORE_EMPLOYEE = gql`
+  query ($first: Int, $after: String) {
+    allDepartments(first: $first, after: $after) {
+      edges {
+        cursor
+        node {
+          id
+          deptName
+        }
+      }
+      pageInfo {
+        startCursor
+        endCursor
+        hasNextPage
+      }
+    }
+  }
+`;

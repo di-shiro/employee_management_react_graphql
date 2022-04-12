@@ -1,4 +1,5 @@
-.employeeList__list {
+.employeeList {
+  /* .employeeList__list { */
   height: 300px;
   overflow: hidden;
   overflow-y: auto;

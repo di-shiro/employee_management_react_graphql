@@ -26,7 +26,7 @@ const EmployeeDetails = () => {
 
   return (
     <>
-      <h3>Employee Detail</h3>
+      <h3>Employee Details</h3>
       {/* (1) Error処理  ********** 以下の文は、最新のuseLazyQuery(apollo client)では動作しないので、コメントアウト。  */}
       {/* {errorSingleEmployee && errorSingleEmployee.message} */}
 
